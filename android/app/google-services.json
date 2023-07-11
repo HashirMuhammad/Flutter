@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "571373221286",
+    "project_id": "eps-moulding",
+    "storage_bucket": "eps-moulding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571373221286:android:b03d9cdbb20666717c0b67",
+        "android_client_info": {
+          "package_name": "com.example.test_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBARF3DYgqTOogpNttYTGNiIDsANvr1xzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
