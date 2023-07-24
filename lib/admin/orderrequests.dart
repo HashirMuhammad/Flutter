@@ -25,6 +25,7 @@ class _orderrequestsState extends State<orderrequests> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Order Requests"),
         ),
         body: Padding(
@@ -59,9 +60,14 @@ class _orderrequestsState extends State<orderrequests> {
                                       );
                                     },
                                     style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateColor.resolveWith(
+                                        (states) => Colors
+                                            .deepPurple.shade400, // Set the desired background color
+                                      ),
                                       fixedSize:
                                           MaterialStateProperty.all<Size>(
-                                        const Size(260,
+                                        const Size(300,
                                             50), // Set the desired width and height
                                       ),
                                     ),
@@ -89,109 +95,7 @@ class _orderrequestsState extends State<orderrequests> {
                   return Text('State: ${snapshot.connectionState}');
                 }
               }),
-          // child: Column(
-          //   children: [
-          //     const SizedBox(
-          //       height: 16,
-          //     ),
-          //     Row(
-          //       children: [
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.pushNamed(context, "updatetracking");
-          //   },
-          //   style: ButtonStyle(
-          //     fixedSize: MaterialStateProperty.all<Size>(
-          //       const Size(260, 50), // Set the desired width and height
-          //     ),
-          //   ),
-          //   child: const Text(
-          //     'Order Name',
-          //     style: TextStyle(
-          //       fontSize: 25,
-          //       fontWeight: FontWeight.bold,
-          //       fontStyle: FontStyle.italic,
-          //     ),
-          //   ),
-          // ),
-          //         Container(
-          //           alignment: Alignment.topLeft,
-          //           child: IconButton(
-          //             onPressed: () {},
-          //             icon: const Icon(Icons.skip_next_outlined),
-          //             iconSize: 30,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //     const SizedBox(
-          //       height: 16,
-          //     ),
-          //     Row(
-          //       children: [
-          //         ElevatedButton(
-          //           onPressed: () {
-          //             Navigator.pushNamed(context, "updatetracking");
-          //           },
-          //           style: ButtonStyle(
-          //             fixedSize: MaterialStateProperty.all<Size>(
-          //               const Size(260, 50), // Set the desired width and height
-          //             ),
-          //           ),
-          //           child: const Text(
-          //             'Order Name',
-          //             style: TextStyle(
-          //               fontSize: 25,
-          //               fontWeight: FontWeight.bold,
-          //               fontStyle: FontStyle.italic,
-          //             ),
-          //           ),
-          //         ),
-          //         Container(
-          //           alignment: Alignment.topLeft,
-          //           child: IconButton(
-          //             onPressed: () {},
-          //             icon: const Icon(Icons.skip_next_outlined),
-          //             iconSize: 30,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //     const SizedBox(
-          //       height: 16,
-          //     ),
-          //     Row(
-          //       children: [
-          //         ElevatedButton(
-          //           onPressed: () {
-          //             Navigator.pushNamed(context, "updatetracking");
-          //           },
-          //           style: ButtonStyle(
-          //             fixedSize: MaterialStateProperty.all<Size>(
-          //               const Size(260, 50), // Set the desired width and height
-          //             ),
-          //           ),
-          //           child: const Text(
-          //             'Order Name',
-          //             style: TextStyle(
-          //               fontSize: 25,
-          //               fontWeight: FontWeight.bold,
-          //               fontStyle: FontStyle.italic,
-          //             ),
-          //           ),
-          //         ),
-          //         Container(
-          //           alignment: Alignment.topLeft,
-          //           child: IconButton(
-          //             onPressed: () {},
-          //             icon: const Icon(Icons.skip_next_outlined),
-          //             iconSize: 30,
-          //           ),
-          //         ),
-          //       ],
-          //     ),
-          //   ],
-          // ),
+        
         ),
         drawer: const my_drawer(),
       ),

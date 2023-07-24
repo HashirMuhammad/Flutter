@@ -24,6 +24,7 @@ class clientordersState extends State<clientorders> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Client Pending Orders"),
         ),
         body: Padding(
@@ -58,9 +59,14 @@ class clientordersState extends State<clientorders> {
                                       );
                                     },
                                     style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateColor.resolveWith(
+                                        (states) => Colors
+                                            .deepPurple.shade400, // Set the desired background color
+                                      ),
                                       fixedSize:
                                           MaterialStateProperty.all<Size>(
-                                        const Size(260,
+                                        const Size(300,
                                             50), // Set the desired width and height
                                       ),
                                     ),

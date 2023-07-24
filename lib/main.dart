@@ -6,7 +6,7 @@ import 'package:test_1/admin/orders.dart';
 import 'package:test_1/admin/pricingcalculator.dart';
 import 'package:test_1/admin/updatetracking.dart';
 import 'package:test_1/admin/vieworderrequests.dart';
-import 'package:test_1/chat.dart';
+import 'package:test_1/client/chat.dart';
 import 'package:test_1/client/clientorders.dart';
 import 'package:test_1/client/home.dart';
 import 'package:test_1/client/pendingorder.dart';
@@ -59,7 +59,7 @@ class myapp extends StatelessWidget {
         "orders": (context) => const orders(),
         "chat": (context) => const ChatScreen(),
         "updatetracking": (context) => const updatetracking(),
-        "adminhome": (context) => adminhome(),
+        "adminhome": (context) => const adminhome(),
 
         // "loginorregister": (context) => LoginPage(),
         // "location":(context) => Location(),

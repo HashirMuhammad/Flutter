@@ -26,7 +26,7 @@ class my_drawer extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/started.png"),
+            image: AssetImage("assets/images/drawer.jpeg"),
             fit: BoxFit.cover,
           ),
         ),

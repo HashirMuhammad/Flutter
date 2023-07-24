@@ -15,6 +15,7 @@ class trackorderinfo extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Track Order Status Info"),
         ),
         body: const Padding(

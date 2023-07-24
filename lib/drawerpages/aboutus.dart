@@ -16,6 +16,7 @@ class aboutus extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("About Us"),
         ),
         body: Padding(

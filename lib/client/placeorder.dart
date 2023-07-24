@@ -49,6 +49,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Place Order"),
         ),
         body: Center(
@@ -203,6 +204,9 @@ class _PlaceOrderState extends State<PlaceOrder> {
                     Padding(
                       padding: const EdgeInsets.all(25.0),
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                    ),
                         onPressed: () {
                           _submitForm();
                         },

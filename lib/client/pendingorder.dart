@@ -65,16 +65,18 @@ class _pendingorderState extends State<pendingorder> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Pending Order"),
         ),
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(16.0),
             child: SingleChildScrollView(
               child: Form(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
+                    SizedBox(height: 6,),
                     TextFormField(
                       controller: productNameController,
                       enabled: false,

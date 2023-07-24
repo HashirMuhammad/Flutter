@@ -35,14 +35,14 @@ class _GetStartedState extends State<GetStarted>
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/started.png"),
+          image: AssetImage("assets/images/getstarted.jpeg"),
           fit: BoxFit.cover,
         ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Padding(
-          padding: const EdgeInsets.only(top: 280.0),
+          padding: const EdgeInsets.only(top: 350.0),
           child: Center(
             child: AnimatedBuilder(
               animation: _fadeAnimation,
@@ -55,7 +55,7 @@ class _GetStartedState extends State<GetStarted>
                         width: 200,
                         height: 50,
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Colors.deepPurpleAccent,
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: TextButton(

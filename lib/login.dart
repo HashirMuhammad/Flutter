@@ -285,7 +285,7 @@ class _login_pageState extends State<login_page> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/started.png"),
+          image: AssetImage("assets/images/login.jpeg"),
           fit: BoxFit.cover,
         ),
       ),
@@ -306,7 +306,7 @@ class _login_pageState extends State<login_page> {
                       style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -315,25 +315,25 @@ class _login_pageState extends State<login_page> {
                     child: TextField(
                       controller: emailtextEditingController,
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         border: const OutlineInputBorder(),
                         hintText: "Enter Your Email",
                         labelText: "Email",
                         hintStyle: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 10,
                         ),
                         labelStyle: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 10,
                         ),
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
+                          borderSide: BorderSide(color: Colors.black),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey),
+                          borderSide: BorderSide(color: Colors.black),
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
@@ -344,18 +344,19 @@ class _login_pageState extends State<login_page> {
                     child: TextField(
                       controller: passwordtextEditingController,
                       keyboardType: TextInputType.text,
+                      
                       obscureText: true,
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         border: const OutlineInputBorder(),
                         hintText: "Enter Password",
                         labelText: "Password",
                         hintStyle: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 10,
                         ),
                         labelStyle: TextStyle(
-                          color: Colors.grey,
+                          color: Colors.black,
                           fontSize: 10,
                         ),
                         enabledBorder: UnderlineInputBorder(
@@ -379,14 +380,14 @@ class _login_pageState extends State<login_page> {
                         child: Text(
                           "Login Account",
                           style: TextStyle(
-                            color: Colors.greenAccent,
+                            color: Colors.deepPurpleAccent.shade200,
                             fontSize: 20,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
                       CircleAvatar(
-                        backgroundColor: Colors.greenAccent,
+                        backgroundColor: Colors.deepPurpleAccent,
                         radius: 20,
                         child: IconButton(
                           icon: Icon(
@@ -408,7 +409,10 @@ class _login_pageState extends State<login_page> {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (c) => signup_page()));
                     },
-                    child: Text("If you don't have an account, Sign up here"),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                    ),
+                    child: Text("Don't have an account, Sign up here"),
                   ),
                 ],
               ),

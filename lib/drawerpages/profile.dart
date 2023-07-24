@@ -22,6 +22,7 @@ class _ProfileState extends State<Profile> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Profile"),
         ),
         body: Padding(
@@ -59,14 +60,6 @@ class _ProfileState extends State<Profile> {
                   ),
                   const SizedBox(height: 16.0),
                   TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Gender Cannot be Changed',
-                      border: OutlineInputBorder(),
-                    ),
-                    enabled: false,
-                  ),
-                  const SizedBox(height: 16.0),
-                  TextFormField(
                     keyboardType: TextInputType.phone,
                     decoration: const InputDecoration(
                       labelText: 'Phone Number',
@@ -78,14 +71,6 @@ class _ProfileState extends State<Profile> {
                       }
                       return null;
                     },
-                  ),
-                  const SizedBox(height: 16.0),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'CNIC Cannot be Changed',
-                      border: OutlineInputBorder(),
-                    ),
-                    enabled: false,
                   ),
                   const SizedBox(height: 16.0),
                   TextFormField(
@@ -109,6 +94,9 @@ class _ProfileState extends State<Profile> {
                         Navigator.pushNamed(context, "home");
                       }
                     },
+                     style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                    ),
                     child: const Text('Save'),
                   ),
                   const SizedBox(height: 8.0),

@@ -52,6 +52,7 @@ class _reviewsState extends State<reviews> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Reviews"),
         ),
         body: Padding(
@@ -151,6 +152,10 @@ class _reviewsState extends State<reviews> {
                 const SizedBox(height: 16.0),
                 ElevatedButton(
                   onPressed: addReview,
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.deepPurpleAccent
+                        .shade200, // Set the desired background color
+                  ),
                   child: const Text('Submit Review'),
                 ),
                 Row(

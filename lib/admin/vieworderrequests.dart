@@ -79,11 +79,12 @@ class _vieworderrequestsState extends State<vieworderrequests> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("View Order Requests"),
         ),
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 8.0),
+            padding: const EdgeInsets.all(8.0),
             child: SingleChildScrollView(
               child: Form(
                 key: _formKey,

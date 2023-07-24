@@ -336,7 +336,8 @@ class signup_pageState extends State<signup_page> {
             .catchError((msg) {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Error: " + msg.toString());
-    })).user;
+    }))
+        .user;
 
     if (firebaseUser != null) {
       Map userMap = {
@@ -365,7 +366,7 @@ class signup_pageState extends State<signup_page> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/started.png"),
+          image: AssetImage("assets/images/login.jpeg"),
           fit: BoxFit.cover,
         ),
       ),
@@ -385,7 +386,7 @@ class signup_pageState extends State<signup_page> {
                     style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey,
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -394,25 +395,25 @@ class signup_pageState extends State<signup_page> {
                   child: TextField(
                     controller: nametextEditingController,
                     keyboardType: TextInputType.name,
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       hintText: "Enter Your Name",
                       labelText: "Name",
                       hintStyle: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.black,
                         fontSize: 10,
                       ),
                       labelStyle: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.black,
                         fontSize: 10,
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -423,25 +424,25 @@ class signup_pageState extends State<signup_page> {
                   child: TextField(
                     controller: emailtextEditingController,
                     keyboardType: TextInputType.emailAddress,
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       hintText: "Enter Your Email",
                       labelText: "Email",
                       hintStyle: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.black,
                         fontSize: 10,
                       ),
                       labelStyle: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.black,
                         fontSize: 10,
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -452,25 +453,25 @@ class signup_pageState extends State<signup_page> {
                   child: TextField(
                     controller: phonetextEditingController,
                     keyboardType: TextInputType.phone,
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       hintText: "Enter Your Phone Number",
                       labelText: "Phone Number",
                       hintStyle: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.black,
                         fontSize: 10,
                       ),
                       labelStyle: TextStyle(
-                        color: Colors.grey,
+                        color: Colors.black,
                         fontSize: 10,
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -482,7 +483,7 @@ class signup_pageState extends State<signup_page> {
                     controller: passwordtextEditingController,
                     keyboardType: TextInputType.text,
                     obscureText: true,
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       hintText: "Enter Password",
@@ -496,11 +497,11 @@ class signup_pageState extends State<signup_page> {
                         fontSize: 10,
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -516,14 +517,14 @@ class signup_pageState extends State<signup_page> {
                       child: Text(
                         "Create Account",
                         style: TextStyle(
-                          color: Colors.greenAccent,
+                          color: Colors.deepPurpleAccent.shade200,
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                     ),
                     CircleAvatar(
-                      backgroundColor: Colors.greenAccent,
+                      backgroundColor: Colors.deepPurpleAccent.shade200,
                       radius: 20,
                       child: IconButton(
                         icon: Icon(
@@ -545,7 +546,10 @@ class signup_pageState extends State<signup_page> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (c) => login_page()));
                   },
-                  child: Text("If you have an account Login here"),
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                    ),
+                  child: Text("Have an account! Login here"),
                 ),
               ],
             ),

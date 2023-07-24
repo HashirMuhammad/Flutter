@@ -16,6 +16,7 @@ class adminhome extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Admin Home"),
         ),
         body: Center(
@@ -29,11 +30,9 @@ class adminhome extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, "orderrequests");
                     },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(
-                            400, 100), // Set the desired width and height
-                      ),
+                     style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                      fixedSize: const Size(400, 100), // Set the desired width and height
                     ),
                     child: const Text(
                       "View Order Requests",
@@ -49,11 +48,9 @@ class adminhome extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, "orders");
                     },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(
-                            400, 100), // Set the desired width and height
-                      ),
+                     style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                      fixedSize: const Size(400, 100), // Set the desired width and height
                     ),
                     child: const Text(
                       ' Orders',
@@ -69,10 +66,9 @@ class adminhome extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, "pricingcalculator");
                     },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(400, 80), // Set the desired width and height
-                      ),
+                     style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                      fixedSize: const Size(400, 100), // Set the desired width and height
                     ),
                     child: const Text(
                       'Pricing Calculator',
@@ -84,24 +80,6 @@ class adminhome extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16.0),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, "chat");
-                    },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(400, 70), // Set the desired width and height
-                      ),
-                    ),
-                    child: const Text(
-                      'Chat',
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),

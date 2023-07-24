@@ -25,6 +25,7 @@ class _ordersState extends State<orders> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Orders"),
         ),
         body: Padding(
@@ -57,9 +58,14 @@ class _ordersState extends State<orders> {
                                           arguments: snapshot.data!.docs[index],);
                                     },
                                     style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateColor.resolveWith(
+                                        (states) => Colors
+                                            .deepPurple.shade400, // Set the desired background color
+                                      ),
                                       fixedSize:
                                           MaterialStateProperty.all<Size>(
-                                        const Size(260,
+                                        const Size(300,
                                             50), // Set the desired width and height
                                       ),
                                     ),

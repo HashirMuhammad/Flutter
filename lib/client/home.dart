@@ -33,6 +33,7 @@ class home extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("home"),
         ),
         body: Center(
@@ -43,14 +44,13 @@ class home extends StatelessWidget {
                 children: [
                   const SizedBox(height: 16.0),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                      fixedSize: const Size(400, 100), // Set the desired width and height
+                    ),
                     onPressed: () {
                       Navigator.pushNamed(context, "placeorder");
                     },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(400, 100), // Set the desired width and height
-                      ),
-                    ),
                     child: const Text(
                       "Place Order",
                       style: TextStyle(
@@ -65,10 +65,9 @@ class home extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, "clientorders");
                     },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(400, 100), // Set the desired width and height
-                      ),
+                   style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                      fixedSize: const Size(400, 100), // Set the desired width and height
                     ),
                     child: const Text(
                       'Pending Orders',
@@ -84,10 +83,9 @@ class home extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, "reviews");
                     },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(400, 80), // Set the desired width and height
-                      ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                      fixedSize: const Size(400, 100), // Set the desired width and height
                     ),
                     child: const Text(
                       'Customer Reviews',
@@ -103,10 +101,9 @@ class home extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, "chat");
                     },
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all<Size>(
-                        const Size(400, 70), // Set the desired width and height
-                      ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                      fixedSize: const Size(400, 100), // Set the desired width and height
                     ),
                     child: const Text(
                       'Chat',
@@ -122,7 +119,7 @@ class home extends StatelessWidget {
             ),
           ),
         ),
-        drawer: const clientdrawer(),
+        drawer: clientdrawer(),
       ),
     );
   }

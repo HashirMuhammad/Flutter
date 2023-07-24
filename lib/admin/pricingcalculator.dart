@@ -45,6 +45,7 @@ class _PricingCalculatorState extends State<PricingCalculator> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Pricing Calculator"),
         ),
         body: ListView(
@@ -60,6 +61,9 @@ class _PricingCalculatorState extends State<PricingCalculator> {
               padding: const EdgeInsets.all(16.0),
               child: ElevatedButton(
                 onPressed: addProduct,
+                style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                    ),
                 child: const Text('Add Product'),
               ),
             ),
@@ -241,6 +245,9 @@ class _ProductInputRowState extends State<ProductInputRow> {
                     widget.onRemove();
                   }
                 },
+                style: ElevatedButton.styleFrom(
+                      primary: Colors.deepPurpleAccent.shade200, // Set the desired background color
+                    ),
                 child: const Text('Remove'),
               ),
             ],

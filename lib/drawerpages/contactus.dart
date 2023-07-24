@@ -11,8 +11,10 @@ class ContactUs extends StatelessWidget {
   Widget build(BuildContext context) {
     const String address =
         '1 - KM, Defence Rd, near Bhubattian, howk, Lahore, Punjab, Pakistan';
-    const String phoneNumber = '+92 3154026203';
-    const String email = 'hashirmuhammad73@gmail.com';
+    const String phoneNumber1 = '+92 3154026203';
+    const String phoneNumber2 = '+92 3240049330';
+    const String email1 = 'hashirmuhammad73@gmail.com';
+    const String email2 = 'umerarhad11157@gmail.com';
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
@@ -23,6 +25,7 @@ class ContactUs extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Contact Us"),
         ),
         body: SingleChildScrollView(
@@ -43,15 +46,19 @@ class ContactUs extends StatelessWidget {
               const Text(
                 'Phone Number:',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                
               ),
               const SizedBox(height: 8),
               GestureDetector(
-                onTap: () => _launchURL('tel:$phoneNumber'),
-                child: const Text(
-                  phoneNumber,
+                
+                onTap: () =>
+                    _launchURL('tel:$phoneNumber1' 'tel : $phoneNumber2'),
+                child: Text(
+                  phoneNumber1,
+                  semanticsLabel: phoneNumber2,
                   style: TextStyle(
                     decoration: TextDecoration.underline,
-                    color: Colors.blue,
+                    color: Colors.deepPurpleAccent.shade200,
                   ),
                 ),
               ),
@@ -62,12 +69,13 @@ class ContactUs extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               GestureDetector(
-                onTap: () => _launchURL('mailto:$email'),
+                onTap: () => _launchURL('mailto:$email1' 'milto: $email2'),
                 child: const Text(
-                  email,
+                  email1,
+                  semanticsLabel: email2,
                   style: TextStyle(
                     decoration: TextDecoration.underline,
-                    color: Colors.blue,
+                    color: Colors.deepPurpleAccent,
                   ),
                 ),
               ),
@@ -81,21 +89,21 @@ class ContactUs extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () => _launchURL('https://www.facebook.com/'),
-                    child: const Icon(Icons.facebook, color: Colors.blue),
+                    child: const Icon(Icons.facebook, color: Colors.deepPurpleAccent),
                   ),
                   const SizedBox(width: 8),
                   GestureDetector(
                     onTap: () => _launchURL('https://www.twitter.com/'),
                     child: const Icon(
                       FontAwesomeIcons.twitter,
-                      color: Colors.blue,
+                      color: Colors.deepPurpleAccent,
                     ),
                   ),
                   const SizedBox(width: 8),
                   GestureDetector(
                     onTap: () => _launchURL('https://www.instagram.com/'),
                     child: const Icon(FontAwesomeIcons.instagram,
-                        color: Colors.blue),
+                        color: Colors.deepPurpleAccent),
                   ),
                 ],
               ),

@@ -84,17 +84,21 @@ class _updatetrackingState extends State<updatetracking> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          backgroundColor: Colors.deepPurpleAccent.shade200,
           title: const Text("Update Tracking status"),
         ),
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(12.0),
             child: SingleChildScrollView(
               child: Form(
                 key: _formKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
+                    SizedBox(
+                      height: 5,
+                    ),
                     TextFormField(
                       enabled: false,
                       controller: productNameController,
@@ -242,6 +246,10 @@ class _updatetrackingState extends State<updatetracking> {
                     Padding(
                       padding: const EdgeInsets.all(25.0),
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.deepPurpleAccent
+                              .shade200, // Set the desired background color
+                        ),
                         onPressed: () {
                           update();
                         },
@@ -262,7 +270,7 @@ class _updatetrackingState extends State<updatetracking> {
                                 ),
                                 color: Colors.black,
                                 onPressed: () {
-                                  Navigator.pushNamed(context, "home");
+                                  Navigator.pushNamed(context, "adminhome");
                                 },
                               ),
                             ),
@@ -270,7 +278,7 @@ class _updatetrackingState extends State<updatetracking> {
                         ),
                         TextButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, "home");
+                            Navigator.pushNamed(context, "adminhome");
                           },
                           child: const Text(
                             'Back to Home',
